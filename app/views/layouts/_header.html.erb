@@ -1,0 +1,34 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand p-3" href="/">LOGO</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+
+      <% if user_signed_in? %>
+        <li class="nav-item">投稿一覧</li>
+        <li class="nav-item">投稿検索</li>
+        <li class="nav-item">マイページ</li>
+        <li class="nav-item">
+          <%= link_to "ログイン", destroy_user_session_path, class: 'nav-link text-dark' %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "About", homes_about_path, class: 'nav-link text-dark' %>
+        </li>
+        <li class="nav-item">投稿一覧</li>
+        <li class="nav-item">投稿検索</li>
+        <li class="nav-item">新規会員登録</li>
+        <li class="nav-item">ログイン</li>
+      <% end %>
+      </ul>
+    </div>
+    </div>
+
+  </nav>
+</header>

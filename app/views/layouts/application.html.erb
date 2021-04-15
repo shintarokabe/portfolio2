@@ -4,12 +4,26 @@
     <title>Bikersshare</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <div id="header">
+      <%= render "layouts/header" %>
+    </div>
+
+    <div>
+      <%= render 'layouts/notifications' %>
+    </div>
+
     <%= yield %>
+
+    <div id="footer">
+      <%= render 'layouts/footer' %>
+    </div>
+
   </body>
 </html>

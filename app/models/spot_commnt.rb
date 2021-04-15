@@ -1,0 +1,2 @@
+class SpotCommnt < ApplicationRecord
+end
